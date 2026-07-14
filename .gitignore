@@ -1,1 +1,21 @@
+# Virtual environment
+venv/
+
+# Environment variables
 .env
+
+# Python bytecode
+__pycache__/
+*.py[cod]
+
+# VS Code
+.vscode/
+
+# Pytest cache
+.pytest_cache/
+
+# mypy cache
+.mypy_cache/
+
+# macOS
+.DS_Store
