@@ -7,8 +7,10 @@ from app.evaluator import evaluate_idea
 from app.database import get_db
 from app.model import Idea
 from typing import List
+from app.auth import router as auth_router
 
 app = FastAPI(title="Startup Ranker")
+app.include_router(auth_router, prefix="/auth", tags=["auth"])
 
 @app.get("/health")
 def health_check():

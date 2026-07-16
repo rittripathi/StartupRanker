@@ -32,3 +32,19 @@ class IdeaSubmitResponse(BaseModel):
     is_valid: bool
     message: str
     score: IdeaScoreParameters|None=None
+
+class UserSignup(BaseModel):
+    email: str
+    password: str = Field(..., min_length=6)
+
+class UserLogin(BaseModel):
+    email:str
+    password:str
+
+class UserOut(BaseModel):
+    id:str
+    email:str
+
+    class Config:
+        from_attributes = True
+        
